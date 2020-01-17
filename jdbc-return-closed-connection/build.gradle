@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+test {
+    useJUnitPlatform()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.tomcat:tomcat-jdbc:9.0.30'
+    compile 'org.postgresql:postgresql:42.2.9'
+
+    testImplementation "org.junit.jupiter:junit-jupiter:5.5.2"
+}
